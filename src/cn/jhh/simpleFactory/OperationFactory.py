@@ -2,18 +2,18 @@ import re
 
 
 class Operation:
-    def getResult(a,b):
+    def getResult():
         pass
 
 class AddOperation(Operation):
-    def getResult(self):
-        return self.a+self.b
+    def getResult(self,a,b):
+        return a+b
 
 class DivOperation(Operation):
-    def getResult(self):
+    def getResult(self,a,b):
         res = 0;
         try:
-            res = self.a/self.b
+            res = a/b
         except(Exception):
             print("被除数不能为0")
         return res;
@@ -39,12 +39,10 @@ def main():
     opt = re.match( r'^\d(.)\d$', str).group(1)
     num2 = re.match( r'^\d.(\d)$', str).group(1)
     print(num1,opt,num2)
-    operationFactory = OperationFactory()
-    operation = operationFactory.getOperation(opt = opt)
-    operation.a = int(num1)
-    operation.b = int(num2)
-    print(operation.getResult())
+
+    print(OperationFactory().getOperation(opt = opt).getResult(int(num1),int(num2)))
 
 
 if __name__  == "__main__":
     main()
+
