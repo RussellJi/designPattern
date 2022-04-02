@@ -1,8 +1,4 @@
 package cn.jhh.strategyPattern;
-
-import java.io.BufferedReader;
-import java.nio.Buffer;
-import java.nio.IntBuffer;
 import java.util.Scanner;
 
 public class Test {
