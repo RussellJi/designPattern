@@ -7,5 +7,9 @@ public class Test {
         templateClass.templateMethod();
         templateClass = new ConcreteClass2();
         templateClass.templateMethod();
+        
+
     }
+
+
 }
